@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700">
+		<style>
+			#menu li,#menu ul{bottom:0;transition:all .5s}#menu,#menu li,#menu ul{transition:all .5s}body{padding-top:60px}#menu{font-family:Roboto;font-weight:300;font-size:24px;white-space:nowrap;position:fixed;top:0;left:0;right:0;background:#fff;overflow:hidden;box-shadow:0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);z-index:1000}#menu li,#menu ul{position:absolute}#menu ul{list-style:none;padding:0;margin:0}#menu li{padding:3px}#menu a{color:#222;text-decoration:none;padding-left:10px;outline:0;position:relative}#menu a:hover{background:#90ee90}#menu-bars,#menu-logo{position:fixed;transition:all .5s}#menu li.selected>a{font-weight:500;color:#222}#menu li.root>a{font-weight:700;color:#444}#menu:not(.horizontal) li.nested>a:after{content:"\25B6";position:absolute;right:-5px;font-size:12px;top:8px;color:#bbb}#menu.horizontal li.nested>a{font-weight:400}#menu li.active>a,#menu li.main>a{color:red}#menu.open{height:100%!important}#menu{height:100%}#menu-bars,#menu-logo{top:20px;left:20px;height:150px;width:auto}#menu-bars:hover,#menu-logo:hover{cursor:pointer}#menu ul{z-index:-1;right:0}#menu li{opacity:0;left:-30px;right:0}#menu #menu-root{z-index:1;width:100%;height:100%}#menu #menu-root>li,#menu li>a:hover+ul>li,#menu ul:hover>li{opacity:1;left:0}#menu li>a:hover+ul,#menu ul:hover{z-index:1}#menu li:nth-child(1){transition-delay:0s}#menu li:nth-child(2){transition-delay:.2s}#menu li:nth-child(3){transition-delay:.3s}#menu li:nth-child(4){transition-delay:.35s}#menu li:nth-child(5){transition-delay:.38s}#menu li:nth-child(6){transition-delay:.4s}#menu li:nth-child(7){transition-delay:.41s}#menu.horizontal{height:50px}#menu-bars{opacity:0;z-index:2}#menu.horizontal #menu-bars{height:50px;top:0;opacity:1}#menu.horizontal #menu-logo{height:50px;top:0;opacity:.5}#menu.horizontal #menu-root{top:0;left:70px}#menu.horizontal li{left:0;opacity:0!important;transition-delay:0s;width:auto;height:auto;right:0}#menu.horizontal a{position:relative}#menu.horizontal li.root>a:after{content:"/";position:absolute;right:-7px;color:#000!important;font-weight:300;top:-3px;font-size:38px}#menu.horizontal li.selected:after{content:"\25BC";opacity:0;display:none;color:#ff3232;position:absolute;right:70px;font-size:22px;top:4px;padding-top:5px;width:30px;height:50px;transition:opacity .5s .5s;z-index:5}#menu.horizontal li.selected:after:hover{cursor:pointer;cursor:hand}#menu.horizontal li.root,#menu.horizontal li.selected{z-index:1;top:0!important;padding:8px 5px 10px!important}#menu.horizontal li.root>a,#menu.horizontal li.selected>a{padding:8px 10px 10px!important}#menu.horizontal.open li.main>ul>li>a,#menu.horizontal.open li.selected:not(.main)>ul>li>a{padding-right:100%}#menu.horizontal:not(.open) li.active{padding:8px 5px 10px!important}#menu.horizontal:not(.open) li.active>a{padding:8px 10px 10px!important}#menu.horizontal #menu-root>li.active{opacity:1!important}#menu.horizontal li.selected>ul>li{opacity:1!important;transition-delay:.5s}#menu.horizontal li.selected{left:0!important;opacity:1!important;transition-delay:0s}#menu.horizontal li.root{left:0!important;opacity:1!important;transition-delay:1s}#menu.horizontal ul{z-index:-1!important}#menu.horizontal #menu-root,#menu.horizontal li.root>ul,#menu.horizontal li.selected>ul{z-index:1!important}#menu.transition li,#menu.transition li.root,#menu.transition li.selected,#menu.transition li.selected>ul>li,#menu.transition li:nth-child(1),#menu.transition li:nth-child(2),#menu.transition li:nth-child(3),#menu.transition li:nth-child(4),#menu.transition li:nth-child(5),#menu.transition li:nth-child(6),#menu.transition li:nth-child(7){transition-delay:0s}#menu li.active,#menu.transition li{transition-delay:0s!important}
+		</style>
+	</head>
+	<body>
+
+	<!-- 
+		Breadcrumb Menu.
+		Replace the NAV below with your own links. Use nested ULs as shown.
+		When run in browser, the page will fill with textareas containing:
+			The menu CSS
+			HTML for the menu, initialised for each page.
+		Click on the textareas to copy
+	-->
+
+	<nav id="menu" class="open">
+		<img src="logo.png" id="menu-logo" />
+		<img src="bars.png" id="menu-bars" />
+		<ul id="menu-root">
+			<li><a href="item1.html">Item 1</a>
+				<ul>
+					<li><a href="item1-1.html">Item 1-1</a></li>
+					<li><a href="item1-2.html">Item 1-2</a></li>
+					<li><a href="item1-3.html">Item 1-3</a></li>
+					<li><a href="item1-4.html">Item 1-4</a></li>
+				</ul>
+			</li>
+			<li><a href="item2.html">Item 2</a>
+				<ul>
+					<li><a href="item2-1.html">Item 2-1</a></li>
+					<li><a href="item2-2.html">Item 2-2</a></li>
+					<li><a href="item2-3.html">Item 2-3</a></li>
+					<li><a href="item2-4.html">Item 2-4</a></li>
+				</ul>
+			</li>
+			<li><a href="item3.html">Item 3</a>
+				<ul>
+					<li><a href="item3-1.html">Item 3-1</a></li>
+					<li><a href="item3-2.html">Item 3-2</a></li>
+					<li><a href="item3-3.html">Item 3-3</a></li>
+					<li><a href="item3-4.html">Item 3-4</a></li>
+				</ul>
+			</li>
+			<li><a href="item4.html">Item 4</a>
+				<ul>
+					<li><a href="item4-1.html">Item 4-1</a></li>
+					<li><a href="item4-2.html">Item 4-2</a></li>
+					<li><a href="item4-3.html">Item 4-3</a></li>
+					<li><a href="item4-4.html">Item 4-4</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script>
+$(function() {
+
+	// base menu styles
+	var baseStyle = $('head style').html();
+	
+	//add id
+	$('#menu li').each(function(i) {
+		var id = i;	//use if all entries are unique: $(this).find('> a').text().toLowerCase().replace(/[^a-z]/,'');
+		$(this).attr('id','menu-'+id);
+		if($(this).find('> ul').length) {
+			$(this).addClass('nested');
+			$(this).find('> ul').attr('id','menulist-'+id);
+		}
+	});
+
+	//get the widths of every li
+	$('#menu li').each(function() { $(this).data('width',$(this).find('> a').width()) });
+
+	var vertical = [32,20];
+	// Vertical list - get the top
+	$('#menu ul').each(function() { 
+		$(this).find('> li').each(function(i) {
+			$(this).data('vTop',i*vertical[0]);
+		});
+	});
+
+	//Vertical list - get the max width
+	function vLeft(obj,left,top) {
+		var maxWidth = 0;
+		obj.find('> li').each(function() {
+			var width = $(this).data('width') + vertical[1];
+			if(width > maxWidth) maxWidth = width;
+		});
+		
+		obj.find('> li').each(function(i) {
+			$(this).data('maxWidth',maxWidth);
+			var width = $(this).data('width') + vertical[1]/2;
+			$(this).data('vPad',maxWidth-width);
+			if($(this).hasClass('nested')) {
+				vLeft($(this).find('> ul'),maxWidth,0);
+			}
+		});
+		
+		obj.data({vLeft:left,vTop:top});	
+	}
+
+	vLeft($('#menu-root'),170,20);
+
+	var horizontal = [20,0];
+	// Horizontal
+	function hLeft(obj,left,totalLeft) {
+		var width = 0;
+		obj.find('> li').each(function() {
+			var w = $(this).data('width') + horizontal[0];
+			$(this).data({hLeft:width,hOffLeft:left,hTotalLeft:totalLeft+w,hWidth:w});
+			if($(this).hasClass('nested')) {
+				hLeft($(this).find('> ul'),w+horizontal[1],totalLeft+left);
+			}
+			width += w;
+		});
+		
+		obj.data({hWidth:width,hLeft:left,hTotalLeft:totalLeft});
+	}
+	hLeft($('#menu-root'),70,0);
+
+	$('#menu-root > li').each(function() { $(this).data('hLeft',0) });
+
+	//create CSS
+	var css = [];
+	// LI
+	$('#menu li').each(function() {
+		//vertical
+		var a = $(this);
+		css.push('#'+a.attr('id') + ' {top:'+a.data('vTop')+'px' + '}');
+		css.push('#'+a.attr('id') + ' > a {padding-right:'+a.data('vPad')+'px' + '}');
+		
+	});
+	// UL
+	$('#menu ul').each(function() {
+		var a = $(this);
+		css.push('#'+a.attr('id') + ' {left:'+a.data('vLeft')+'px;top:'+a.data('vTop')+'px;' + '}');
+		css.push('#menu.horizontal #'+a.attr('id') + ' {left:'+a.data('hLeft')+'px;' + '}');
+	});
+
+	//media queries
+	var media = [0,100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,10000];
+	var mediaLength = media.length - 1;
+	var max = [], min = [];
+	for(var i=0;i<mediaLength;i++) {
+		max[i] = [];
+		min[i] = [];
+	}
+	// UL
+	$('#menu ul').each(function() {
+		//is wider than screen
+		var a = $(this),
+			width = a.data('hWidth'),
+			left = a.data('hTotalLeft'),
+			total = a.data('hLeft') + left
+			id = a.attr('id'),
+			parent = a.attr('id').replace(/^menulist/,'menu');
+		for(var i=0;i<mediaLength;i++) {
+			if(width+total < media[i+1] && width+total > media[i] && id !== 'menu-root') {
+				max[i].push('\t#menu.horizontal #'+parent+'.selected > #'+id+' {left:-'+left+'px;top:50px;}');
+				max[i].push('\t#menu.horizontal:not(.open) #'+parent+'.selected:after {display:block;opacity:1;}');
+				max[i].push('\t#menu.horizontal #'+parent+'.selected {cursor:pointer;cursor:hand;}');
+				max[i].push('\t#menu.horizontal:not(.open) #'+id+' > li.active {top:-50px !important;left:'+(total+2)+'px !important;}');			
+			}
+			
+			if(width < media[i+1] && width > media[i] || (i==0 && id=='menu-root')) {
+				a.find('> li').each(function() {
+					var b = $(this);
+					min[i].push('#menu.horizontal #'+b.attr('id') + ' {left:'+b.data('hLeft')+'px;top:0 !important;padding:8px 5px 10px 5px;' + '}');
+					min[i].push('#menu.horizontal #'+b.attr('id') + ' > a {padding:8px 10px 10px 10px !important;' + '}');					
+				});
+			}
+			
+		}
+		
+		a.find('> li').each(function() {
+				var b = $(this),
+					bWidth = b.data('hWidth'),
+					bLeft = b.data('hTotalLeft'),
+					bTotal = bLeft + bWidth,
+					bOffset = b.data('hOffLeft') + 5,
+					bId = b.attr('id');
+			for(var i=0;i<mediaLength;i++) {
+				
+				if(bTotal > media[i] && bTotal < media[i+1] && id !== 'menu-root') {
+					max[i].push('#menu.horizontal:not(.open) #'+bId+'.active, #menu.horizontal:not(.open) #'+bId+'.main { margin-left: -'+bOffset+'px;z-index:5;padding-left:10px;width:100%;background:white !important; }');
+					max[i].push('#menu.horizontal:not(.open) #'+bId+'.active:after, #menu.horizontal:not(.open) #'+bId+'.main:after { right:'+(80-bOffset)+'px; }');
+					
+					max[i].push('#menu.horizontal.open #'+bId+'.selected, #menu.horizontal.open #'+bId+'.root { left:-'+(bLeft-20)+'px !important;top:50px !important;padding:3px !important} ');
+					max[i].push('#menu.horizontal.open #'+bId+'.selected > a, #menu.horizontal.open #'+bId+'.root > a { padding:0 100% 0 10px !important;} ');
+					
+					max[i].push('#menu.horizontal.open #'+bId+'.selected > ul, #menu.horizontal.open #'+bId+'.root > ul { left:0 !important;top:35px !important} ');
+				}
+				
+			}
+
+
+			var p = b.parent().parent();
+			while(p.prop('tagName')=='LI' && p.parent().attr('id') !== 'menu-root') {
+				var pTotal = p.data('hTotalLeft') + bWidth,
+					pId = p.attr('id'),
+					pOff = p.data('hOffLeft') + bOffset;
+				for(var i=0;i<mediaLength;i++) {
+					
+					if(pTotal > media[i] && pTotal < media[i+1]) {
+						max[i].push('#menu.horizontal:not(.open) #'+bId+'.active, #menu.horizontal:not(.open) #'+bId+'.main { margin-left: -'+pOff+'px;z-index:5;padding-left:10px;width:100%;background:white !important; }');
+						max[i].push('#menu.horizontal:not(.open) #'+bId+'.active:after, #menu.horizontal:not(.open) #'+bId+'.main:after { right:'+(80-pOff)+'px; }');
+					}
+				}
+				p = p.parent().parent();
+			}
+					
+		});
+		
+	});
+
+
+	for(var i=mediaLength-1;i>=0;i--) {
+		if(max[i].length) css.push('@media (max-width:'+media[i+1]+'px) {\n'+max[i].join('\n')+'\n}');
+	}
+
+	for(var i=0;i<mediaLength;i++) {
+		if(min[i].length) css.push('@media (min-width:'+media[i+1]+'px) {\n'+min[i].join('\n')+'\n}');
+	}
+
+	$('head').append('<style>'+css.join('\n')+'</style>');
+
+
+	//now get html for each page
+	var htmlcode = [];
+
+	$('#menu a').each(function() {
+		var href = $(this).attr('href');
+		$('#menu .selected,#menu .root,#menu .active,#menu .main,#menu .current').removeClass('current main selected root active');
+		var p = $(this).parent();
+		$(this).addClass('current');
+		if(p.hasClass('nested')) p.addClass('main');
+		else p = p.addClass('active').parent().parent();
+		if(p.prop('tagName') == "LI") {
+			p = p.addClass('selected').parent().parent();
+			while(p.prop('tagName') == "LI") p = p.addClass('root').parent().parent();
+		}
+		$('#menu').removeClass('open').addClass('horizontal');
+		
+		htmlcode.push([href,$('#menu')[0].outerHTML.replace(/[\t\r\n]+/g,' ').replace(/ class=(""|'')/g,'')]);
+	});
+
+	// Append code to page
+
+	$('body').append('<h3>CSS</h3>\n<textarea>\n'+baseStyle+css.join('')+'\n</textarea></pre>');
+
+	$('body').append( htmlcode.map(function(a) {
+		return '<h4>'+a[0]+'</h4><textarea>' + $('<code>').text(a[1]).html() + '</textarea>';
+		}).join('\n')
+		);
+
+
+		
+	// Click functions, to allow testing of menu
+		
+	$('#menu-logo').on('click',function(e) {
+		e.stopPropagation();
+		if(!$('#menu').hasClass('transition')) {
+			$('#menu').toggleClass('horizontal').addClass('transition').removeClass('open');
+			setTimeout(function() { $('#menu').removeClass('transition'); },500);
+		}
+	});
+	$('#menu a').on('click',function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		if(!$('#menu').hasClass('transition')) {
+			var href = $(this).attr('href');
+			$('#menu .selected,#menu .root,#menu .active,#menu .main').removeClass('main selected root active');
+			var p = $(this).parent();
+			if(p.hasClass('nested')) p.addClass('main');
+			else p = p.addClass('active').parent().parent();
+			if(p.prop('tagName') == "LI") {
+				p = p.addClass('selected').parent().parent();
+				while(p.prop('tagName') == "LI") p = p.addClass('root').parent().parent();
+			}
+			
+			$('#menu').removeClass('open');
+			if(!$('#menu').hasClass('horizontal')) {
+				$('#menu').addClass('horizontal transition');
+				setTimeout(function() { $('#menu').removeClass('transition'); },500);
+			}
+		}
+	});
+
+	$('#menu').on('click','.selected',function() {
+		var id = $(this).attr('id');
+		var cursor = $(this).css('cursor');
+		if(cursor == "pointer") $('#menu').toggleClass('open');
+	});
+	
+	// Copy textareas to clipboard on click
+	
+	$('textarea').each(function() {
+		$(this).on('click',function() {
+			$(this)[0].select();
+			try {
+				var successful = document.execCommand('copy');
+				console.log(successful ? 'Copied to clipboard' : 'Unable to copy');
+			} catch (err) {
+				console.log('Unable to copy');
+			}
+		});
+	});
+
+
+});
+</script>
+</body>
+</html>
